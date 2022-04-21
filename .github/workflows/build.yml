@@ -38,7 +38,7 @@ jobs:
       - name: Set up Docker Buildx
         uses: docker/setup-buildx-action@v1
       - name: Login do docker.io
-        run: docker login -u odidev -p ${{ secrets.DOCKER_TOKEN }}
+        run: docker login -u abhishek138 -p abhishek138
       - name: build and publish image
         id: docker_build
         uses: docker/build-push-action@v2
@@ -48,5 +48,4 @@ jobs:
           platforms: linux/amd64,linux/arm64
           push: true
           tags: |
-            odidev/selenoid:${{ steps.prepare.outputs.tag_name }}
-            odidev/selenoid:latest
+            abhishek138/selenoid:latest
